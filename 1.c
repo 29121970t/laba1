@@ -144,6 +144,7 @@ int main(int argc, char const *argv[]) {
             printf("Threshold: %ld\n", threshold);
             break;
 
+            
         case EXIT_INPUT:
             exit(0);
             break;
