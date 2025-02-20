@@ -71,7 +71,7 @@ void sortFile(FILE *file, int inputArrayLength, long threshold) {
             fseek(file, j_1 * sizeof(long), SEEK_SET);
             fread(&b, sizeof(long), 1, file);
 
-            if (a > b) {
+            if (a < b) {
                 fseek(file, j_ * sizeof(long), SEEK_SET);
                 fwrite(&b, sizeof(long), 1, file);
                 fseek(file, j_1 * sizeof(long), SEEK_SET);
@@ -141,6 +141,7 @@ int main(int argc, char const *argv[]) {
             fwrite(demoArray, sizeof(long), demoArrayLength, file);
             inputArrayLength = demoArrayLength;
             threshold = demoThreshold;
+            printf("Threshold: %ld\n", threshold);
             break;
 
         case EXIT_INPUT:
