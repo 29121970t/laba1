@@ -26,7 +26,7 @@ int start(char * title){
     printLineWithOffset("3. Run in demo mode (hardcoded input)", 4);
     printLineWithOffset("4. Exit programm", 4);
 
-    int answ = 0;
+    long answ = 0;
     readLongWithDialog_v(&answ, ">", ___isInputC);
     return answ;
 }
